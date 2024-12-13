@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Babyzar</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Babyzar</h1>
+        </div>
+        <div>
+            <img class="img-size" src="img/roupas-bebe-freepik.jpg"> 
+        </div>
+    </header>
+
+    <section class="form">
+        <label for="nome">Nome da peça:</label>
+        <input type="text" id="nome" required>
+        <label for="categoria">Categoria:</label>
+        <select id="categoria">
+            <option value="Casa">Casa</option>
+            <option value="Passeio">Passeio</option>
+            <option value="Pijama">Pijama</option>
+        </select>
+        <label for="tamanho">Tamanho:</label>
+        <select id="tamanho">
+            <option value="0-3m">0-3m</option>
+            <option value="3-6m">3-6m</option>
+            <option value="6-9m">6-9m</option>
+            <option value="6-9m">9-12m</option>
+            <option value="6-9m">12-18m</option>
+            <option value="6-9m">18-24m</option>
+            <option value="6-9m">2y</option>
+            <option value="6-9m">3y</option>
+        </select>
+        <label for="valor_compra">Valor de compra:</label>
+        <input type="number" id="valor_compra" step="0.01" min="0" placeholder="R$">
+        <label for="valor_venda">Valor de venda:</label>
+        <input type="number" id="valor_venda" step="0.01" min="0" placeholder="R$">
+        <button type="button" onclick="novoItem(event)">Adicionar</button>
+    </section>
+
+    <section class="tabela">
+        <table id="tabelaRoupas">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Tamanho</th>
+                <th>Valor de compra(R$)</th>
+                <th>Valor de venda(R$)</th>
+                <th></th>
+            </tr>
+
+        </table>
+    </section>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
